@@ -1,0 +1,20 @@
+{
+  "name": "Простая заглушка - XML",
+  "request": {
+    "method": "POST",
+    "url": "/hello",
+    "bodyPatterns": [
+      {
+        "matchesXPath" : "//subVal"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body" : "<?xml version=\"1.0\" ?> <subVal>sub val is {{{ request.body.getHello.subVal }}}</subVal>",
+    "headers": {
+
+      "Content-Type": "text/xml"
+    }
+  }
+}

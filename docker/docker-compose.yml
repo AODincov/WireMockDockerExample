@@ -1,0 +1,8 @@
+version: "3"
+services:
+  wiremock:
+    container_name: wiremock
+    build: wiremock
+    ports:
+      - '8080:8080'
+      - '8443:8443'
